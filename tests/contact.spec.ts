@@ -12,7 +12,7 @@ test.describe.only('Contact', () => {
         await contactPage.navigate()
 
         // fill out the input fields and submit
-        await contactPage.submitForm(faker.person.fullName(), faker.internet.email(), faker.phone.number(), faker.lorem.paragraphs(2));
+        await contactPage.submitForm(faker.name.fullName(), faker.internet.email(), faker.phone.number(), faker.lorem.paragraphs(2));
 
         // verify success message
         await expect(contactPage.successTxt).toHaveText('Thanks for contacting us! We will be in touch with you shortly')
